@@ -1,0 +1,12 @@
+{
+  "name": "avnish-pandit-ji-portfolio",
+  "version": "1.0.0",
+  "description": "वेदाचार्य पं. अवनीश मिश्र (Pandit Avnish Ji) Official Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["pandit", "astrology", "vedic", "griha-pravesh", "puja", "ncr"],
+  "author": "पं. अवनीश मिश्र",
+  "license": "ISC"
+}

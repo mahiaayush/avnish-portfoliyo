@@ -1,0 +1,504 @@
+/* Sacred Vedic Styling for Pt. Avnish Mishra Portfolio */
+
+:root {
+  --primary-saffron: #ea580c;
+  --primary-deep: #c2410c;
+  --sacred-gold: #d97706;
+  --sacred-gold-light: #fbbf24;
+  --vermilion: #b91c1c;
+  --deep-maroon: #7f1d1d;
+  --bg-parchment: #fffdf8;
+  --bg-card: #ffffff;
+  --text-main: #1c1917;
+  --text-muted: #57534e;
+  --border-gold: rgba(217, 119, 6, 0.25);
+  --shadow-gold: 0 10px 30px -5px rgba(217, 119, 6, 0.2);
+  --font-heading: 'Rozha One', 'Cinzel Decorative', serif;
+  --font-body: 'Poppins', 'Lexend', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-parchment);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Auspicious Background Textures */
+.vedic-bg-pattern {
+  background-color: #fffdf8;
+  background-image: radial-gradient(rgba(234, 88, 12, 0.08) 1px, transparent 1px), radial-gradient(rgba(217, 119, 6, 0.05) 1px, #fffdf8 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.vedic-mandala-overlay {
+  position: relative;
+}
+
+.vedic-mandala-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 50% 50%, rgba(217, 119, 6, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Typography */
+.font-devanagari {
+  font-family: var(--font-heading);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-saffron {
+  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Golden Border & Glows */
+.gold-card {
+  background: #ffffff;
+  border: 1px solid var(--border-gold);
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+}
+
+.gold-card:hover {
+  border-color: rgba(217, 119, 6, 0.5);
+  box-shadow: 0 15px 35px -5px rgba(217, 119, 6, 0.18), 0 0 15px rgba(251, 191, 36, 0.2);
+  transform: translateY(-4px);
+}
+
+.vedic-border-top {
+  position: relative;
+}
+
+.vedic-border-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #d97706, #ea580c, #d97706, transparent);
+}
+
+/* Diya / Holy Flame Glow Animation */
+@keyframes flame-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(234, 88, 12, 0.6), 0 0 30px rgba(217, 119, 6, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(234, 88, 12, 0.8), 0 0 45px rgba(251, 191, 36, 0.5);
+    transform: scale(1.02);
+  }
+}
+
+.flame-glow {
+  animation: flame-pulse 3s infinite ease-in-out;
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.float-animation {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+/* Badge styling */
+.vedic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #fef3c7 0%, #ffedd5 100%);
+  color: #9a3412;
+  border: 1px solid rgba(217, 119, 6, 0.3);
+}
+
+/* Buttons */
+.btn-primary-vedic {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary-vedic:hover {
+  background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.45);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.btn-whatsapp-vedic {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-whatsapp-vedic:hover {
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.45);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.btn-outline-vedic {
+  background: transparent;
+  color: #b45309;
+  border: 2px solid #d97706;
+  font-weight: 600;
+  padding: 0.7rem 1.6rem;
+  border-radius: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-outline-vedic:hover {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #b45309;
+  transform: translateY(-2px);
+}
+
+/* Service Pill Tabs */
+.service-tab-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid #e7e5e4;
+  background: #ffffff;
+  color: #57534e;
+}
+
+.service-tab-btn.active, .service-tab-btn:hover {
+  background: #ea580c;
+  color: #ffffff;
+  border-color: #ea580c;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+}
+
+/* Gallery Lightbox Modal */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.lightbox-modal.active {
+  display: flex;
+}
+
+/* Booking Modal */
+.booking-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.booking-modal.active {
+  display: flex;
+}
+
+/* Mobile Bottom Navigation Bar */
+.mobile-action-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-action-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #ffffff;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.12);
+    border-top: 1px solid rgba(217, 119, 6, 0.2);
+    padding: 0.65rem 1rem;
+    gap: 0.75rem;
+  }
+}
+
+/* Om watermark */
+.om-watermark {
+  position: absolute;
+  right: -2rem;
+  bottom: -2rem;
+  font-size: 14rem;
+  font-family: serif;
+  color: rgba(234, 88, 12, 0.03);
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+/* Accordion */
+.faq-item {
+  border-bottom: 1px solid rgba(217, 119, 6, 0.2);
+  transition: all 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding-bottom: 1.25rem;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fdfaf5;
+}
+::-webkit-scrollbar-thumb {
+  background: #d97706;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+}
+
+/* =========================================
+   Education Chain Graph Line Styles
+   ========================================= */
+.edu-graph-container {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Continuous Vertical Graph Line */
+.edu-graph-line {
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  left: 50%;
+  width: 4px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #d97706 0%, #ea580c 35%, #b45309 70%, #d97706 100%);
+  box-shadow: 0 0 12px rgba(234, 88, 12, 0.45);
+  border-radius: 9999px;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .edu-graph-line {
+    left: 24px;
+    transform: none;
+  }
+}
+
+/* Node Milestone on Graph Line */
+.edu-graph-node {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 4px solid #ea580c;
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: 0 0 0 5px rgba(251, 191, 36, 0.35), 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.edu-graph-item:hover .edu-graph-node {
+  background: #ea580c;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translate(-50%, -50%) scale(1.15);
+  box-shadow: 0 0 0 8px rgba(234, 88, 12, 0.25), 0 6px 18px rgba(234, 88, 12, 0.4);
+}
+
+@media (max-width: 768px) {
+  .edu-graph-node {
+    left: 24px;
+    width: 38px;
+    height: 38px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Chain Item Container */
+.edu-graph-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.5rem;
+  width: 100%;
+}
+
+.edu-graph-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Alternating Left / Right Content */
+.edu-graph-item.item-left {
+  justify-content: flex-start;
+}
+
+.edu-graph-item.item-left .edu-graph-card {
+  width: calc(50% - 40px);
+  margin-right: auto;
+}
+
+.edu-graph-item.item-right {
+  justify-content: flex-end;
+}
+
+.edu-graph-item.item-right .edu-graph-card {
+  width: calc(50% - 40px);
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .edu-graph-item.item-left .edu-graph-card,
+  .edu-graph-item.item-right .edu-graph-card {
+    width: calc(100% - 64px);
+    margin-left: 64px !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Graph Card Styling */
+.edu-graph-card {
+  background: #ffffff;
+  border: 2px solid rgba(217, 119, 6, 0.25);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.edu-graph-card:hover {
+  border-color: rgba(234, 88, 12, 0.7);
+  box-shadow: 0 12px 30px -5px rgba(234, 88, 12, 0.2), 0 0 15px rgba(251, 191, 36, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Arrow pointer from card to node on desktop */
+@media (min-width: 769px) {
+  .edu-graph-item.item-left .edu-graph-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%) rotate(45deg);
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border-top: 2px solid rgba(217, 119, 6, 0.3);
+    border-right: 2px solid rgba(217, 119, 6, 0.3);
+  }
+
+  .edu-graph-item.item-right .edu-graph-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%) rotate(-135deg);
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border-top: 2px solid rgba(217, 119, 6, 0.3);
+    border-right: 2px solid rgba(217, 119, 6, 0.3);
+  }
+}
+
+/* Main Subject Highlight Banner */
+.main-subject-box {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.9rem;
+}
