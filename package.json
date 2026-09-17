@@ -4,7 +4,8 @@
   "description": "वेदाचार्य पं. अवनीश मिश्र (Pandit Avnish Ji) Official Website",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo 'Static site ready'"
   },
   "keywords": ["pandit", "astrology", "vedic", "griha-pravesh", "puja", "ncr"],
   "author": "पं. अवनीश मिश्र",
