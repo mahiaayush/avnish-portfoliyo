@@ -17,7 +17,7 @@ const SITE_DATA = {
     experienceYears: "15+",
     happyYajmans: "5000+",
     panditsLed: "22,000+",
-    heroImage: "https://sites.google.com/sitesv-images-rt/AMxu72sdQE7e-7IcirdSuV39Zot36YjvdktSHFLoK1EJm2XQVNZwqp67CoN3qgRk4whHopD70ZJhiJXxtIBmx09fe0Q7bfkAkH99bfCD0ChSDrALs7kVqY-yB2I0ymLjL50a7sDVC6c3BHvS3zk922tAhVUvSrK_hC6d668dceFSB3LSZbP9GBCIZsulkbJd=w16383",
+    heroImage: "assets/images/pandit-avnish-portrait-puja.jpeg",
     tagline: "आपके सभी धार्मिक एवं मांगलिक कार्यों के लिए विश्वसनीय वैदिक पंडित जी",
     taglineEn: "Trusted Vedic Pandit for all your Sacred Rituals and Astrological Guidance",
     shortBio: "शुक्ल यजुर्वेद परंपरा के निष्ठावान ज्ञाता, स्वर्ण पदक प्राप्त वेदाचार्य। हम बिना किसी शॉर्टकट के, पूर्ण मंत्रोच्चार और शास्त्रीय विधि-विधान के साथ हर पूजा का आध्यात्मिक मर्म समझाते हुए संपन्न कराते हैं।"
@@ -29,21 +29,21 @@ const SITE_DATA = {
       year: "2017",
       venue: "जगदंबा पोहरा देवी मंदिर, वाशिम (महाराष्ट्र)",
       description: "22,000 मूर्धन्य वैदिक पंडितों के साथ, जगद्गुरु रामराव महाराज के पावन सान्निध्य तथा तत्कालीन प्रधान यजमान देवेंद्र फडणवीस की गरिमामयी उपस्थिति में शुक्ल यजुर्वेद अनुसार यज्ञ को शास्त्रसम्मत संपन्न कराया।",
-      image: "https://sites.google.com/sitesv-images-rt/AMxu72sB2FPBDxIFBZ_4e9iBlgi1DhYcjogFBZrGjPXkJFCUMFhvV_TEG4iehvgxnonxkrLT0yocvDWxM99lQ3jNtUctPV-vIy2uhokr3cXjbdgGv0YKaHZ4pILrCpF7ZpKdT32eJXSmpMjUwMwsHEf1nWppHka_mW45ej6U9o68ea22FtGPDYgsOB74grAxCt1FNf5nXRGCJEY77nwzzlUgFb29cVvE1m-ocMuY0-YboDI=w1280"
+      image: "assets/images/lakshachandi-yagya-rath.jpeg"
     },
     {
       title: "नर्मदेश्वर तट पर गहन शिव साधना",
       year: "आध्यात्मिक तप",
       venue: "पवित्र नर्मदा तट",
       description: "प्रकृति की गोद में, जल और पर्वत के बीच पारस शिवलिंग एवं नर्मदेश्वर के समीप आत्मिक शांति और ऊर्जा संतुलन हेतु विशेष तप एवं अनुष्ठान।",
-      image: "https://sites.google.com/sitesv-images-rt/AMxu72vmKTXad59yhVmrM60YwFfd_2iiuxKN7P_KmqLox5cxDWZoYduOZqz9efPV4cEtVoMUOjbcAK7qA4UX3CRbzvMmWQqzXy2WiholqxE_nIhydG60alhmiTfcAPkLUXjGHoC9lMucJotRkDAa-eCxZltCSCtmD4wijISzesPx1l3dsSoc0sqECrBlIyIai70UVStpf0SRQk_sOEnt61NbpWhSmHgplzI10a31I7KKZns=w1280"
+      image: "assets/images/narmada-tat-shiv-sadhana.jpeg"
     },
     {
       title: "महाशिवरात्रि पारस शिवलिंग महापूजा",
       year: "वार्षिक अनुष्ठान",
       venue: "सिद्ध पीठ साधना स्थल",
       description: "महाशिवरात्रि के पावन अवसर पर पारस शिवलिंग की विधि-विधान से महापूजा, रुद्राभिषेक एवं सहस्रार्चन जिससे यजमानों के जीवन में दिव्य शांति और शिवकृपा का वास होता है।",
-      image: "https://sites.google.com/sitesv-images-rt/AMxu72sOVMACmh4CiGGNx49JjMaTySkgC64iE0fll7Yk8ybyJ3dLBtrPP-w-CPxIQ8YhApJzOqkBgGLShwDsWEisM77mrIEalnMucL80MHI7Q6m7otQ4KYAcbZbIaChKatf1Y4KxJ8c0n14io-xxUetaliwGZB-YBhuE7I0KbvTc1q-i_RVUkkbun_4JY9qvogYMEdz5uH2nXyTgf7X3aHAZ7HvM0Faw3lM-kWytekY4AuI=w1280"
+      image: "assets/images/shiva-sphatik-paras-rudrabhishek.jpeg"
     }
   ],
 
@@ -306,76 +306,106 @@ const SITE_DATA = {
 
   gallery: [
     {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72sB2FPBDxIFBZ_4e9iBlgi1DhYcjogFBZrGjPXkJFCUMFhvV_TEG4iehvgxnonxkrLT0yocvDWxM99lQ3jNtUctPV-vIy2uhokr3cXjbdgGv0YKaHZ4pILrCpF7ZpKdT32eJXSmpMjUwMwsHEf1nWppHka_mW45ej6U9o68ea22FtGPDYgsOB74grAxCt1FNf5nXRGCJEY77nwzzlUgFb29cVvE1m-ocMuY0-YboDI=w1280",
+      url: "assets/images/lakshachandi-yagya-rath.jpeg",
       caption: "लक्षचंडी महायज्ञ (पोहरा देवी) में 22,000 पंडितों के साथ यज्ञाचार्य के रूप में पं. अवनीश मिश्र",
       category: "mahayagya",
       year: "2017"
     },
     {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72vmKTXad59yhVmrM60YwFfd_2iiuxKN7P_KmqLox5cxDWZoYduOZqz9efPV4cEtVoMUOjbcAK7qA4UX3CRbzvMmWQqzXy2WiholqxE_nIhydG60alhmiTfcAPkLUXjGHoC9lMucJotRkDAa-eCxZltCSCtmD4wijISzesPx1l3dsSoc0sqECrBlIyIai70UVStpf0SRQk_sOEnt61NbpWhSmHgplzI10a31I7KKZns=w1280",
-      caption: "पवित्र नर्मदेश्वर तट पर भगवान शिव का गहन ध्यान एवं साधना",
+      url: "assets/images/lakshachandi-yagyashala-grand.jpeg",
+      caption: "ऐतिहासिक लक्षचंडी महायज्ञ की भव्य विशाल पिरामिड-नुमा यज्ञशाला एवं जनसमूह",
+      category: "mahayagya",
+      year: "2017"
+    },
+    {
+      url: "assets/images/mahayagya-purnahuti-vasordhara.jpeg",
+      caption: "वैदिक महायज्ञ वेदी पर पवित्र गौ-घृत की अखंड वसोर्धारा एवं पूर्णाहुति अनुष्ठान",
+      category: "mahayagya",
+      year: "2017"
+    },
+    {
+      url: "assets/images/pandit-avnish-yagya-pandal.jpeg",
+      caption: "22,000 मूर्धन्य वैदिक पंडितों के ऐतिहासिक लक्षचंडी महायज्ञ परिसर में पं. अवनीश मिश्र",
+      category: "mahayagya",
+      year: "2017"
+    },
+    {
+      url: "assets/images/vedic-mantra-path-yagyashala.jpeg",
+      caption: "यज्ञशाला में शुक्ल यजुर्वेद संहिता मंत्रोच्चार एवं वैदिक वेद-पाठ",
+      category: "mahayagya",
+      year: "2017"
+    },
+    {
+      url: "assets/images/narmada-tat-shiv-sadhana.jpeg",
+      caption: "पवित्र नर्मदा तट (नर्मदेश्वर) पर भगवान शिव का गहन ध्यान एवं साधना",
       category: "shiva",
       year: "साधना"
     },
     {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72sOVMACmh4CiGGNx49JjMaTySkgC64iE0fll7Yk8ybyJ3dLBtrPP-w-CPxIQ8YhApJzOqkBgGLShwDsWEisM77mrIEalnMucL80MHI7Q6m7otQ4KYAcbZbIaChKatf1Y4KxJ8c0n14io-xxUetaliwGZB-YBhuE7I0KbvTc1q-i_RVUkkbun_4JY9qvogYMEdz5uH2nXyTgf7X3aHAZ7HvM0Faw3lM-kWytekY4AuI=w1280",
-      caption: "महाशिवरात्रि पर पारस शिवलिंग का वैदिक मंत्रोच्चार पूर्वक महाभिषेक",
+      url: "assets/images/shiva-sphatik-paras-rudrabhishek.jpeg",
+      caption: "महाशिवरात्रि पर पारस शिवलिंग का गोमुखी शृंगी से शास्त्रोक्त महारुद्राभिषेक",
       category: "shiva",
       year: "महाशिवरात्रि"
     },
     {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72vRuc3oQCBKKRvrcIEg5IBCxhs4fBANjsDzuPePI42N18Y3UOWFhPgjDKeh6THu_NE15dDhKG68Lin-_xIhRsIcxP9WFP9yeNCDgyQglsqKtv4B3pXeMvBOyzTcnGGPZCR9LYFARaiPNZGLMWaw7hkZCRq4PJQCfQcFy4RLINfP1O3A15BHRSZdKBRJ=w16383",
-      caption: "वैदिक अग्निहोत्र एवं महायज्ञ वेदी पर पूर्णाहुति अनुष्ठान",
-      category: "mahayagya",
-      year: "2026"
-    },
-    {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72uqn_7vmsV8SCcxT7ZpCtsuwF4JljS5q-VdPGM1Ekb7DHn1DCa-rhD261G1ofZSkdQvbBaXyLrRh7Oz2SesL3-0wyQCiV_sgbJ9u2n8sXJEww4vpPDTJdGs0oLi0J2S7fjksOkJZGMba7K6oIQcS8aiL4y8O8qz3jn-4HhStiYXJyHhsSBe2f5l8Ea52VB5sUkSYzmP40Zhphp9psNbuG33KS52zADGrSpNrtT4S-o=w1280",
-      caption: "गृह प्रवेश एवं वास्तु शांति पूजन में कलश स्थापन",
-      category: "rituals",
-      year: "2026"
-    },
-    {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72tbQIG4lsRu8-GwahHCO8oN5vH3NgvWnPKkcDOIT5egKi0LP8_vzJc_8HhOtkp1bufqkzEjjLEcuURpf21lUlmGxB0_llV09318NZVmIcckouvf4CcphMZPJUfYUjRFRJebj84UTl0AJSAYAHmcfOLZNCT0-2Vxmj6KDfiNd4NyXXFAqMwt7KrDbRujogH35MkbB8rlhuxCStEop4Apwy0GQopAhPYIXvNXad2t5wg=w1280",
-      caption: "सत्यनारायण कथा एवं नवग्रह मंडल पूजन",
-      category: "rituals",
-      year: "2025"
-    },
-    {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72tOUsaR14MHnJOtdvDGnJlpLH5lbLpPXaAImY47AWi3yMHK-iLiMhwER66lvXIvW5EDU3GTOlzFZ4eYayq1egLKaPdiwb_lwAjYgr-qU3KK8ewEn1mxJB9pzR3miTYQqEB9dV9ydeaNMWIVq6PH4Dojg1Cgf-l9CAIqk2wi4BJO0-gqlKv5ZttvgzH1Y8nMeh0KWW6o_7b68K7XeoqN7hXqR2eZcUY_IbG2AvIyNe4=w1280",
-      caption: "पवित्र विवाह संस्कार में अग्नि साक्षी फेरे एवं मंत्रोच्चार",
-      category: "rituals",
-      year: "2025"
-    },
-    {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72suRCO56qaPv_Jue3-IHI-D_wXVsu3Pr5OUcDCpWCDAyoTQKZDhIOu0FdDNiD_sVp44-sXzbtsfOTY_ggecZEGL0BULoW4fnuYqcdv0_BQUlXzd8vvkee8OqFBNAGymahIUy1yiG0R8aV3Vwrj0LyqMh3xWvdk_1rlZWIKwJ8MLyP9xfbWHmXLnel4c7Eo3ZnLDh_AqPVmrFlw8DsGKHx1wCp2WVMaBp0w0Gx0kQ2s=w1280",
-      caption: "यज्ञशाला में समिधा समर्पण एवं वैदिक स्तुति",
-      category: "mahayagya",
-      year: "2024"
-    },
-    {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72vJ1JE9trcsKctGRoDFXWxA_05Z_snFSk6hc-x8zKP3wFTIeUfxou0ILt5YV1QO2V1vUt8owXSxFgyW4ZOhvxtYRqoHOktakX877y5O9-ahvrRxHT2cSTca5hGkZGbgm9rkY_mH7KpyWD9JMoAoGhQZ1ftEj2emHvWo0bVAsbt2oVhRnZ95iOXPIbbE2EmmmN8D1Rc8p_HXb51JlwvNn-03gXdDK7AN93fkiTtU=w1280",
-      caption: "रुद्राभिषेक में पंचामृत स्नान एवं जलधारा अर्पण",
+      url: "assets/images/parthiv-shivling-mahotsav.jpeg",
+      caption: "द्वितीय पार्थिव शिवलिंग महोत्सव - 11,000 पार्थिव शिवलिंग निर्माण एवं महारुद्राभिषेक",
       category: "shiva",
-      year: "2024"
+      year: "2026"
     },
     {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72sKM1C3RtUauJZm44O44K7YZQH7FehqpQDzJiBCe85A2cB6khvOzOChScGD7uiPL4Y_cbA2ro2E3KwttiDLjVnfsUnmj8IDaeIeEuttLt28g6axnzHPRp7uQgbaI9pLVFUCoVO7LwLU2GzD1WcyoN8VlYvf6Q1_OhnxVZtFXE6cW-1-GZ59y5Pze0kqWtLpUPYyWYhDo5n05QHKLe0ui5VHEebslzBLYqMyhHKwOzA=w1280",
-      caption: "शास्त्रोक्त मंत्रोच्चार के साथ यजमान परिवार को आशीर्वाद",
+      url: "assets/images/shravan-kashi-vishwanath-puja.webp",
+      caption: "पवित्र श्रावण मास में काशी विश्वनाथ महादेव विशेष पूजा, रुद्राभिषेक एवं बेलपत्र अर्पण",
+      category: "shiva",
+      year: "श्रावण"
+    },
+    {
+      url: "assets/images/shiva-mandir-pran-pratishtha.jpeg",
+      caption: "शिव परिवार, नंदी एवं गणेश जी की वैदिक मंत्रोच्चार पूर्वक प्राण-प्रतिष्ठा एवं महापूजा",
+      category: "shiva",
+      year: "प्रतिष्ठा"
+    },
+    {
+      url: "assets/images/griha-pravesh-kanya-pujan.jpeg",
+      caption: "गृह प्रवेश एवं वास्तु शांति पूजन में कलश स्थापन एवं पावन कन्या पूजन विधान",
       category: "rituals",
-      year: "2023"
+      year: "2026"
     },
     {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72tFgWMvFdgKg3WVjjWnxGbjsNeh-lD0mHbrZNzR1v2PqQhZ4A4V-rM_5vSMRqLeYQBpshtTyLLmjH_GaxbnA5IGABYh69uiXCfIRSow9t1cCBXJE34wkc1rMV-1St1MCNMQd2vwJtoI8jbERoEimFmz3ZQT_Nitx-3yb2tBe2jgm9iBne_Uohd0HOBFFWwyoJt9NHBO9xlD7mqstr8nu0ZhFUZKxv6Ue_mHi8_V=w1280",
-      caption: "महामृत्युंजय महाहवन एवं आहुति क्रम",
-      category: "mahayagya",
-      year: "2022"
-    },
-    {
-      url: "https://sites.google.com/sitesv-images-rt/AMxu72tzuDF-T6M-9yWS-PF1vt_gIuFUG1oxaf4dcrcu3nchzn73PvwI4tfW2ZKOGZwfnjD6YOUyUBu4jdwGp7y84BzHYmDAfH-XptjGEsyJaZ7gRkBfBBtybH9uDhX4A4JZ3l77uSjivQjDUhZ4sraBufsSjXhGGYmZ7PRCfXIIFXLIbkhsVNsSgkpnN4Uv9_Pgk18j4ajeYd8oER4tVEU8ZGjDb-nId7t0dhdNG2LWXvE=w1280",
-      caption: "नवग्रह शांति एवं नक्षत्र शांति विधान",
+      url: "assets/images/sarvatobhadra-mandala-puja.jpeg",
+      caption: "शास्त्रोक्त सर्वतोभद्र एवं नवग्रह मंडल निर्माण एवं पूजन",
       category: "rituals",
-      year: "2021"
+      year: "2026"
+    },
+    {
+      url: "assets/images/mangal-kalash-archana-puja.jpeg",
+      caption: "मंगल कलश स्थापन, पंचामृत एवं पुष्पार्चन अनुष्ठान",
+      category: "rituals",
+      year: "2026"
+    },
+    {
+      url: "assets/images/amarkantak-ashram-sadhana.jpeg",
+      caption: "पवित्र अमरकंटक नर्मदा उद्गम आश्रम में विशेष शांति अनुष्ठान एवं यजमान आशीर्वाद",
+      category: "rituals",
+      year: "अमरकंटक"
+    },
+    {
+      url: "assets/images/hanuman-vatika-varshikotsav.jpeg",
+      caption: "हनुमान वाटिका 22वाँ वार्षिक महोत्सव, अखंड रामायण पाठ एवं पूर्णाहूति",
+      category: "rituals",
+      year: "वार्षिक"
+    },
+    {
+      url: "assets/images/pandit-avnish-shobhayatra.jpeg",
+      caption: "धार्मिक महोत्सव एवं भव्य शोभायात्रा में आचार्य रूप में सहभागिता",
+      category: "rituals",
+      year: "शोभायात्रा"
+    },
+    {
+      url: "assets/images/pandit-avnish-banner.jpeg",
+      caption: "हनुमान वाटिका ज्योतिष केन्द्र - प्रामाणिक जन्मपत्री एवं वैदिक मार्गदर्शन",
+      category: "rituals",
+      year: "ज्योतिष"
     },
     {
       url: "assets/images/Acharya-Degree.jpeg",
@@ -406,6 +436,24 @@ const SITE_DATA = {
       caption: "उत्तर मध्यमा (12th) प्रमाण पत्र - उत्तर प्रदेश माध्यमिक संस्कृत शिक्षा परिषद् (विशेष योग्यता सहित प्रथम श्रेणी)",
       category: "certificates",
       year: "प्रमाणपत्र"
+    },
+    {
+      url: "assets/images/12th-marksheet.jpeg",
+      caption: "उत्तर मध्यमा (12th) अंकसूची - उत्तर प्रदेश माध्यमिक संस्कृत शिक्षा परिषद् (406/600 Honours)",
+      category: "certificates",
+      year: "अंकसूची"
+    },
+    {
+      url: "assets/images/10th-praman.jpeg",
+      caption: "पूर्व मध्यमा (10th) प्रमाण पत्र - उत्तर प्रदेश माध्यमिक संस्कृत शिक्षा परिषद्, लखनऊ",
+      category: "certificates",
+      year: "प्रमाणपत्र"
+    },
+    {
+      url: "assets/images/10th-marksheet.jpeg",
+      caption: "पूर्व मध्यमा (10th) अंकसूची - उत्तर प्रदेश माध्यमिक संस्कृत शिक्षा परिषद्",
+      category: "certificates",
+      year: "अंकसूची"
     }
   ],
 

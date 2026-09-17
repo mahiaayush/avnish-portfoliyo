@@ -324,7 +324,7 @@ function renderGallery(category) {
            alt="${item.caption}" 
            loading="lazy"
            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-           onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609358905581-e5382c169c9b?w=800&auto=format&fit=crop&q=60';" />
+           onerror="this.onerror=null; this.src='assets/images/pandit-avnish-portrait-puja.jpeg';" />
       
       <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity flex flex-col justify-end p-4 text-white">
         <span class="text-[11px] font-semibold tracking-wider text-amber-300 uppercase mb-1">
