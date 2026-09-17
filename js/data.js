@@ -3,8 +3,8 @@ const SITE_DATA = {
   panditInfo: {
     name: "पं. अवनीश मिश्र",
     nameEn: "Pt. Avnish Mishra",
-    title: "वेदाचार्य, स्वर्ण पदक विजेता",
-    titleEn: "Vedacharya, Gold Medalist",
+    title: "वेदाचार्य एवं ज्योतिषाचार्य, स्वर्ण पदक विजेता",
+    titleEn: "Vedacharya & Jyotishacharya, Gold Medalist",
     specialization: "कुंडली कर्मकांड, महायज्ञ एवं वैदिक ज्योतिष परामर्श",
     specializationEn: "Vedic Rituals, Mahayagya & Astrology Consultation",
     peeth: "भैरवबाबा सिद्ध तंत्र पीठ रतनपुर (छत्तीसगढ़)",
