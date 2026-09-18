@@ -269,6 +269,40 @@ body {
   display: flex;
 }
 
+/* Share Modal */
+.share-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.share-modal.active {
+  display: flex;
+}
+
+/* Toast Notification */
+.share-toast {
+  position: fixed;
+  bottom: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(40px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.share-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
 /* Mobile Bottom Navigation Bar */
 .mobile-action-bar {
   display: none;

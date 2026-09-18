@@ -517,6 +517,15 @@ function initModals() {
   const nextBtn = document.getElementById('lightbox-next');
   const prevBtn = document.getElementById('lightbox-prev');
 
+  const shareModal = document.getElementById('share-modal');
+  const closeShareBtn = document.getElementById('close-share-btn');
+  if (closeShareBtn && shareModal) {
+    closeShareBtn.addEventListener('click', closeShareModal);
+    shareModal.addEventListener('click', (e) => {
+      if (e.target === shareModal) closeShareModal();
+    });
+  }
+
   if (closeLightboxBtn && lightboxModal) {
     closeLightboxBtn.addEventListener('click', closeLightbox);
     lightboxModal.addEventListener('click', (e) => {
@@ -530,6 +539,7 @@ function initModals() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeBookingModal();
+      closeShareModal();
       closeLightbox();
     } else if (e.key === 'ArrowRight' && lightboxModal && lightboxModal.classList.contains('active')) {
       nextLightboxImage();
@@ -623,4 +633,130 @@ function sendWhatsAppBooking({ name, phone, service, date, location, notes }) {
   const whatsappUrl = `https://wa.me/${SITE_DATA.panditInfo.whatsapp}?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, '_blank');
 }
+
+// ==========================================
+// Profile Social Share Functionality
+// ==========================================
+const PROFILE_SHARE_DATA = {
+  title: "वेदाचार्य एवं ज्योतिषाचार्य पं. अवनीश मिश्र (स्वर्ण पदक विजेता)",
+  text: "🕉️ वेदाचार्य एवं ज्योतिषाचार्य पं. अवनीश मिश्र जी की आधिकारिक प्रोफ़ाइल। गृह प्रवेश, विवाह संस्कार, महामृत्युंजय हवन, रुद्राभिषेक एवं सटीक ज्योतिष मार्गदर्शन (15+ वर्ष वैदिक अनुभव, स्वर्ण पदक विजेता)।",
+  url: "https://pandit-ji-near.vercel.app/"
+};
+
+function openShareModal() {
+  const modal = document.getElementById('share-modal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeShareModal() {
+  const modal = document.getElementById('share-modal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function shareOn(platform) {
+  const url = encodeURIComponent(PROFILE_SHARE_DATA.url);
+  const text = encodeURIComponent(PROFILE_SHARE_DATA.text);
+  const title = encodeURIComponent(PROFILE_SHARE_DATA.title);
+
+  let targetUrl = '';
+  switch (platform) {
+    case 'whatsapp':
+      targetUrl = `https://api.whatsapp.com/send?text=${text}%0A%0A${url}`;
+      break;
+    case 'facebook':
+      targetUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+      break;
+    case 'twitter':
+    case 'x':
+      targetUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+      break;
+    case 'telegram':
+      targetUrl = `https://t.me/share/url?url=${url}&text=${text}`;
+      break;
+    case 'linkedin':
+      targetUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+      break;
+    case 'native':
+      if (navigator.share) {
+        navigator.share({
+          title: PROFILE_SHARE_DATA.title,
+          text: PROFILE_SHARE_DATA.text,
+          url: PROFILE_SHARE_DATA.url
+        }).catch(() => {});
+        return;
+      } else {
+        copyProfileLink();
+        return;
+      }
+    default:
+      copyProfileLink();
+      return;
+  }
+
+  if (targetUrl) {
+    window.open(targetUrl, '_blank', 'noopener,noreferrer,width=650,height=550');
+  }
+}
+
+function copyProfileLink() {
+  const shareUrl = PROFILE_SHARE_DATA.url;
+  
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      showShareToast('✓ लिंक क्लिपबोर्ड पर कॉपी हो गया!');
+    }).catch(() => {
+      fallbackCopyText(shareUrl);
+    });
+  } else {
+    fallbackCopyText(shareUrl);
+  }
+
+  const copyBtnText = document.getElementById('copy-btn-text');
+  if (copyBtnText) {
+    const orig = copyBtnText.textContent;
+    copyBtnText.textContent = 'कॉपी हुआ! ✓';
+    setTimeout(() => {
+      copyBtnText.textContent = orig;
+    }, 2500);
+  }
+}
+
+function fallbackCopyText(text) {
+  const textArea = document.createElement('textarea');
+  textArea.value = text;
+  textArea.style.position = 'fixed';
+  textArea.style.left = '-9999px';
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    document.execCommand('copy');
+    showShareToast('✓ लिंक क्लिपबोर्ड पर कॉपी हो गया!');
+  } catch (err) {
+    showShareToast('लिंक: ' + text);
+  }
+  document.body.removeChild(textArea);
+}
+
+function showShareToast(message) {
+  let toast = document.getElementById('share-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'share-toast';
+    toast.className = 'share-toast bg-stone-900 text-amber-300 px-5 py-3 rounded-full text-xs sm:text-sm font-semibold shadow-2xl border border-amber-500/40 flex items-center gap-2';
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML = `<i class="fa-solid fa-circle-check text-green-400"></i> <span>${message}</span>`;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
+}
+
 
